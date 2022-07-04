@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import {LogIn} from "./components/login";
 import {CreateAccount} from "./components/createAccount";
 import {Main} from "./components/main";
+import "./styles/app.scss"
 import React from "react";
 
 
@@ -10,19 +11,20 @@ function App() {
    <>
 
       <Router>
+          <div className="div_links">
           <nav>
-              <Link to="/logIn">Zaloguj</Link>
-              <Link to="/createAccount">Załóż konto</Link>
+              <Link className="link_log_in" to="/logIn">Zaloguj</Link>
+              <Link className="link_create_account" to="/createAccount">Załóż konto</Link>
 
           </nav>
           <nav>
-              <Link to="/">Start</Link>
-              <Link to="/what_about">O co chodzi?</Link>
-              <Link to="/about_us">O nas</Link>
-              <Link to="/organization">Fundacja i organizacje</Link>
-              <Link to="/contact">Kontakt</Link>
+              <Link className="link_start" to="/">Start</Link>
+              <Link className="link_what_about" to="/what_about">O co chodzi?</Link>
+              <Link className="link_about_us" to="/about_us">O nas</Link>
+              <Link className="link_organization" to="/organization">Fundacja i organizacje</Link>
+              <Link className="link_contact" to="/contact">Kontakt</Link>
           </nav>
-
+          </div>
 
           <Routes>
           <Route path="/" element={<Main />} />
