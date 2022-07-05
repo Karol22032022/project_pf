@@ -11,20 +11,7 @@ function App() {
    <>
 
       <Router>
-          <div className="div_links">
-          <nav>
-              <Link className="link_log_in" to="/logIn">Zaloguj</Link>
-              <Link className="link_create_account" to="/createAccount">Załóż konto</Link>
 
-          </nav>
-          <nav>
-              <Link className="link_start" to="/">Start</Link>
-              <Link className="link_what_about" to="/what_about">O co chodzi?</Link>
-              <Link className="link_about_us" to="/about_us">O nas</Link>
-              <Link className="link_organization" to="/organization">Fundacja i organizacje</Link>
-              <Link className="link_contact" to="/contact">Kontakt</Link>
-          </nav>
-          </div>
 
           <Routes>
           <Route path="/" element={<Main />} />
@@ -34,6 +21,8 @@ function App() {
               <Route path="/about_us" element={<CreateAccount />} />
               <Route path="/organization" element={<CreateAccount />} />
               <Route path="/contact" element={<CreateAccount />} />
+              <Route path="/give_things" element={<CreateAccount />} />
+              <Route path="/organize_action" element={<CreateAccount />} />
           </Routes>
 
       </Router>
