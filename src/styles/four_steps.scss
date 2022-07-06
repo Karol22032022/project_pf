@@ -1,0 +1,33 @@
+
+.steps_text{
+padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.steps_pictures{
+  background-color: #eaeaea;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+.steps_param{
+  font-size: 2rem;
+}
+.steps_picture_one, .steps_picture_two,.steps_picture_three,.steps_picture_four{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.four_steps_link{
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

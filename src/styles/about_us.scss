@@ -1,0 +1,116 @@
+
+
+.section_about_us{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Open Sans', sans-serif;
+
+  .div_about_photo{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/People.jpg?alt=media&token=52d3cdfa-edd4-45fb-8df8-ec34aafb5064");
+    width: 50%;
+    height: 55rem;
+  }
+  .div_about_text{
+width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .param_about{
+
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .param_lorem{
+
+      font-size: 1.5rem;
+      width: 75%;
+      text-align: center;
+    }
+   .sign_param{
+    display: flex;
+    align-items: flex-end;
+   }
+  }
+}
+
+
+.help_for{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+.help_who{
+  padding-top:2rem ;
+  font-size: 2rem;
+}
+}
+.section_with_params_who{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+
+  .param_two_who{
+
+    width: 16rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4.7rem;
+
+
+  }
+  .param_org{
+    font-size: 1.25rem;
+    width: 8rem;
+    text-align: center;
+  }
+  .param_fund{
+    font-size: 1.25rem;
+  }
+  .param_local{
+    font-size: 1.25rem;
+  }
+}
+.text_who_section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+.text_about_who_one{
+  width: 40rem;
+  font-size: 1.5rem;
+  text-align: center;
+  flex-direction: column;
+
+
+}}
+.section_contact_with_us{
+display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  .div_contact_photo{
+    width: 60%;
+    height: 60rem;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Background-Contact-Form.jpg?alt=media&token=5a966bbd-e252-4442-94b4-8318cbe54642");
+  opacity: 0.4;
+  }
+
+}
+.section_contact_form{
+  width:40%;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .param_about{
+    font-size:2rem;
+  }
+
+}
