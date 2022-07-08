@@ -7,17 +7,12 @@
   justify-content: flex-end;
   background-repeat: no-repeat;
   background-position-x: -400px;
-
 }
-
-
-
 
 .two_sections_main{
   display: flex;
   flex-direction: row;
   height: 785px;
-
 
   .div_dupa{
     padding-top: 8rem;
@@ -28,29 +23,19 @@
     margin-right: 15rem;
     .text_start_to_help, .text_give_things{
       font-size: xx-large;
-
     }
-
     .div_with_links{
      display: flex;
      flex-direction: row;
      padding-top: 3rem;
      .link_to_things,.link_to_organize{
-
        color: black;
-
    }
-
 }
 }}
-
 .link_give_it:hover,.link_organizing:hover{
-
-
     -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-
     @-webkit-keyframes text-pop-up-top {
       0% {
         -webkit-transform: translateY(0);
@@ -83,15 +68,7 @@
         text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
       }
     }
-
-
-
-
   }
-
-
-
-
 .link_give_it, .link_organizing{
   display: flex;
   justify-content: center;
@@ -104,10 +81,6 @@
   border: 1px solid #7a7a7a;
   margin-right: 1rem;
 }
-
-
-
 .links_nav_second, .link__nav_one {
   padding-top: 3rem;
-
 }
