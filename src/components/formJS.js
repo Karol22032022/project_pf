@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/formJS.scss";
 
 const firstState = {
-    name:"",
+    name:'',
     email:"",
     text:"",
     nameError:"",
@@ -19,6 +19,12 @@ export default class FormJs extends React.Component{
             {
                 [event.target.name]: isCheckbox
                 ?event.target.checked:
+                    event.target.value,
+                [event.target.email]: isCheckbox
+                ?event.target.checked:
+                    event.target.value,
+                [event.target.text]: isCheckbox
+                    ?event.target.checked:
                     event.target.value
             })};
     validate = () => {
@@ -30,9 +36,10 @@ export default class FormJs extends React.Component{
          nameError = "Wpisz imię!"
      }
 
-     if (this.state.email.includes('@')){
+     if (!this.state.email.includes('@')){
          emailError = 'Podany email nie jest prawidłowy!';
      }
+
      if (emailError || nameError || textError){
          this.setState({emailError, nameError, textError});
          return false;
@@ -56,9 +63,9 @@ export default class FormJs extends React.Component{
                 <div>
                     <p>Wpisz swoje imię</p>
                     <input
-                    name="Imię"
+                    name="name"
                     type="text"
-                    placeholder="name"
+                    placeholder="Imię"
                     value={this.state.name}
                     onChange={this.handleChange}
                     />
@@ -68,7 +75,8 @@ export default class FormJs extends React.Component{
                     <p>Wpisz swój mail</p>
                     <input
                         name="email"
-                        placeholder="email@mail.com"
+                        type="email"
+                        placeholder="Twój e-mail"
                         value={this.state.email}
                         onChange={this.handleChange}
                     />
@@ -77,6 +85,7 @@ export default class FormJs extends React.Component{
                 <div>
                     <p>Wpisz swoją wiadomość</p>
                     <input
+                        name="text"
                         type="text"
                         placeholder="Lorem ipsum dolor sit amet,
                         consectetur adipisicing elit.
@@ -89,10 +98,10 @@ export default class FormJs extends React.Component{
                     />
                 </div>
                 <div>
-                    <button type="submit">Wyślij!</button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
-        )
+        );
     }
 }
 
