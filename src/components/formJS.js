@@ -39,7 +39,15 @@ export default class FormJs extends React.Component{
      if (!this.state.email.includes('@')){
          emailError = 'Podany email nie jest prawidłowy!';
      }
-
+        if (!this.state.email){
+            emailError = 'Wpisz swój email!';
+        }
+        if (!this.state.text){
+            textError = 'Wpisz wiadomość!';
+        }
+        if (this.state.text.length < 120){
+            textError = 'Wiadomość musi mieć minimum 120 znaków!';
+        }
      if (emailError || nameError || textError){
          this.setState({emailError, nameError, textError});
          return false;
@@ -53,8 +61,15 @@ export default class FormJs extends React.Component{
         if(isValid){
         console.log(this.state);
         this.setState(firstState)
+//https://fer-api.coderslab.pl/v1/portfolio/contact
+            fetch('', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json"},
+                body: JSON.stringify(this.state)
+            }).then(() => {
+                console.log('sending complete')
+            })
         }};
-
 
     render(){
         return(
@@ -70,7 +85,7 @@ export default class FormJs extends React.Component{
                     onChange={this.handleChange}
                     />
                 </div>
-                <div>{this.state.nameError}</div>
+                <div style={{color:'red'}}>{this.state.nameError}</div>
                 <div>
                     <p>Wpisz swój mail</p>
                     <input
@@ -81,12 +96,14 @@ export default class FormJs extends React.Component{
                         onChange={this.handleChange}
                     />
                 </div>
+                    <div style={{color:'red'}}>{this.state.emailError}</div>
                 </section>
                 <div>
                     <p>Wpisz swoją wiadomość</p>
                     <input
                         name="text"
                         type="text"
+                        id="text_message"
                         placeholder="Lorem ipsum dolor sit amet,
                         consectetur adipisicing elit.
                         Amet, aperiam aut beatae consequatur
@@ -97,8 +114,9 @@ export default class FormJs extends React.Component{
                         onChange={this.handleChange}
                     />
                 </div>
+                <div style={{color:'red'}}>{this.state.textError}</div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Wyślij!</button>
                 </div>
             </form>
         );
