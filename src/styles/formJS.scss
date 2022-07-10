@@ -1,0 +1,47 @@
+
+
+.div_name, .div_mail{
+  margin-right: 0.5rem;
+  width: 12rem;
+  margin-bottom: 1rem;
+  border-bottom: #545454;
+  .input_text_name, .input_email{
+    width: 12rem;
+    height: 1.5rem;
+    border-top:none;
+    border-right: none;
+    border-left: none;
+
+  }
+
+}
+
+.div_text_message{
+  margin-bottom: 0.5rem;
+  .text_area_message{
+    border-top:none;
+    border-right: none;
+    border-left: none;
+    resize:none;
+    font-family:"Open Sans", serif ;
+    text-align: justify;
+    width: 25rem;
+    height: 7rem;
+  }
+}
+.button_div{
+  display: flex;
+  justify-content: flex-end;
+  .button_submit{
+    margin-top: 1rem;
+    border: 1px solid black;
+    width: 7rem;
+    height: 3rem;
+    background-color: #ffffff;
+  }
+  .button_submit:hover{
+    color: #817c7c;
+    cursor: pointer;
+  }
+
+}
