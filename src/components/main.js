@@ -6,6 +6,7 @@ import {FourSteps} from "./FourSteps";
 import {AboutUs} from "./AboutUs";
 import "../styles/main.scss";
 
+
 export function Main() {
     return (
         <>
@@ -13,10 +14,10 @@ export function Main() {
                 <section className="two_sections_main">
                     <section className="section_param">
                         <Header/>
-                        <div className="div_dupa">
+                        <div id="div_start_scroll" className="div_start">
                             <p className="text_start_to_help">Zacznij pomagać!</p>
                             <p className="text_give_things">Oddaj niechciane rzeczy w zaufane ręce</p>
-                            <img className="decoration"
+                            <img className="decoration" alt="decoration"
                                  src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
                             <div className="div_with_links">
                                 <div className="link_give_it">

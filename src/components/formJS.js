@@ -36,7 +36,7 @@ export default class FormJs extends React.Component{
      let nameError = "";
      let emailError = "";
      let textError = "";
-     
+
      if(!this.state.name) {
          nameError = "Wpisz imię!"
      }

@@ -53,17 +53,29 @@ width: 50%;
   flex-direction: row;
   padding-top: 2rem;
   margin-bottom: 2rem;
-
+  .param_one_who{
+    background: #cccccc;
+    border:none;
+  }
+  .param_one_who:focus{
+    border:1px solid black;
+  }
+  .param_three_who{
+    border:none;
+  }
+  .param_three_who:focus{
+    border:1px solid black;
+  }
   .param_two_who{
-
+    border:none;
     width: 16rem;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 4.7rem;
-
-
+  }
+  .param_two_who:focus{
+    border:1px solid black;
   }
   .param_org{
     font-size: 1.25rem;
@@ -114,3 +126,4 @@ display: flex;
   }
 
 }
+
