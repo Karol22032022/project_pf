@@ -1,13 +1,24 @@
 import React from "react";
 import "../styles/about_us.scss";
-import FormComponent from "./FormJs";
 import FormJs from "./FormJs";
+import {useState} from "react";
+import {ExamplesThree} from "./ExamplesThree";
+import {ExamplesTwo} from "./ExamplesTwo";
+import {ExamplesOne} from "./ExamplesOne";
+
+
+const pageOne = ExamplesOne;
+const pageTwo = ExamplesTwo;
+const pageThree = ExamplesThree;
 
 
 export function AboutUs() {
-    return (
-        <>
-            <section className="section_about_us">
+
+    const [page, setPage] = useState([pageOne]);
+
+        return (
+            <>
+            <section id="test_scroll" className="section_about_us">
                 <div className="div_about_text">
                     <p className="param_about">O nas</p>
                     <img alt="decoration"
@@ -27,7 +38,7 @@ export function AboutUs() {
 
             </section>
 
-            <section className="help_for">
+            <section id="our_help" className="help_for">
 
                 <p className="help_who">Komu pomagamy?</p>
                 <img alt="decoration"
@@ -35,15 +46,15 @@ export function AboutUs() {
             </section>
             <section className="section_with_params_who">
 
-                <div className="param_one_who">
+                <button className="param_one_who" style={{backgroundColor:'white'}} onClick={() => setPage(pageOne)}>
                     <p className="param_fund">Fundacjom</p>
-                </div>
-                <div className="param_two_who">
+                </button>
+                <button className="param_two_who" style={{backgroundColor:'white'}} onClick={() => setPage(pageTwo)}>
                     <p className="param_org">Organizacjom pozarządowym</p>
-                </div>
-                <div className="param_three_who">
+                </button>
+                <button className="param_three_who" style={{backgroundColor:'white'}} onClick={() => setPage(pageThree)}>
                     <p className="param_local">Lokalnym zbiórkom</p>
-                </div>
+                </button>
 
             </section>
             <section className="text_who_section">
@@ -55,27 +66,23 @@ export function AboutUs() {
                 </div>
             </section>
             <section className="section_with_examples">
-
-
-            </section>
-            <section className="section_contact_with_us">
-
-                <div className="div_contact_photo">
-
-                </div>
-                <section className="section_contact_form">
-
-                    <p className="param_about">Skontaktuj się z nami!</p>
-                    <img alt="decoration"
-                         src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
-
-                  <FormJs/>
-
-                </section>
-
+            <div>{page}</div>
 
             </section>
-        </>
+        <section className="section_contact_with_us">
+
+            <div className="div_contact_photo">
+
+            </div>
+            <section id="contact" className="section_contact_form">
+
+                <p className="param_about">Skontaktuj się z nami!</p>
+                <img alt="decoration"
+                     src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
+                <FormJs/>
+
+            </section>
+        </section>
+    </>
     )
-
 }
