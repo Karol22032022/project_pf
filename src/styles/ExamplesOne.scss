@@ -1,0 +1,26 @@
+.fund_section{
+font-family: Merriweather, serif;
+}
+.fund_one{
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .fund_param_one_x{
+    font-size: 1.5rem;
+  }
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+.button_one, .button_two{
+  width: 2rem;
+  height: 2.5rem;
+  background-color: #ffffff;
+  border: none;
+}
+  .button_one:focus, .button_two:focus{
+    border: 1px solid black;
+  }
+}

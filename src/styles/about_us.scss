@@ -56,12 +56,14 @@ width: 50%;
   .param_one_who{
     background: #cccccc;
     border:none;
+    width: 16rem;
   }
   .param_one_who:focus{
     border:1px solid black;
   }
   .param_three_who{
     border:none;
+    width: 16rem;
   }
   .param_three_who:focus{
     border:1px solid black;
@@ -72,7 +74,6 @@ width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 4.7rem;
   }
   .param_two_who:focus{
     border:1px solid black;
@@ -127,3 +128,8 @@ display: flex;
 
 }
 
+.section_with_examples{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
