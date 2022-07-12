@@ -59,14 +59,13 @@ export function AboutUs() {
             </section>
             <section className="text_who_section">
                 <div className="text_about_who_one">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laboriosam,
-                        modi officia quaerat reiciendis repellendus vero. Delectus eaque et incidunt iste, iusto
-                        laboriosam maiores mollitia quidem,
-                        quos repellat repudiandae vitae!</p>
+                    <p>Pomagamy różnym podmiotom. Są to między innymi fundacje oraz organizacje pozarządowe.
+                        Dzięki nam zorganizowano także wiele zbiórek. Przykłady znajdziesz poniżej!
+                        Delectus eaque et incidunt iste, iusto laboriosam maiores mollitia quidem vitae!</p>
                 </div>
             </section>
             <section className="section_with_examples">
-            <div>{page}</div>
+            <div className="display_page">{page}</div>
 
             </section>
         <section className="section_contact_with_us">
