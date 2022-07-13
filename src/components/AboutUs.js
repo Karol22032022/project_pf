@@ -1,12 +1,21 @@
 import React from "react";
 import "../styles/AboutUs.scss";
 import FormJs from "./FormJs";
-import {XYZ} from "./components_examples/Pagination";
+import {usePagination} from "./components_examples/Pagination";
+import { Pagination } from '@mui/material';
+
 
 
 export function AboutUs() {
 
+    const one = "TEKST";
+    
 
+    const posts = [
+       one
+    ];
+
+    const { setCurrentPage, currentPosts, amountOfPages } = usePagination(posts);
 
     return (
         <>
@@ -58,8 +67,16 @@ export function AboutUs() {
                 </div>
             </section>
             <section className="section_with_examples">
-                {/*//<div className="display_page">{page}</div>*/}
-<XYZ/>
+              <div className="display_page">
+                  {currentPosts}
+                  <Pagination
+                      count={amountOfPages}
+                      onChange={(event, page) => setCurrentPage(page)}
+
+                  />
+
+              </div>
+
             </section>
             <section className="section_contact_with_us">
 
