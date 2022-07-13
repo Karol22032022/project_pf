@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {LogIn} from "./components/Login";
 import {CreateAccount} from "./components/CreateAccount";
 import {Main} from "./components/Main";
-import "./styles/app.scss"
+import "./styles/App.scss"
 
 function App() {
   return (
