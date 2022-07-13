@@ -4,7 +4,7 @@ import {Header} from "./Header";
 import {Yellow} from "./YellowPart";
 import {FourSteps} from "./FourSteps";
 import {AboutUs} from "./AboutUs";
-import "../styles/main.scss";
+import "../styles/Main.scss";
 
 
 export function Main() {

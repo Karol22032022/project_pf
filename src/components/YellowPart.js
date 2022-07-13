@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../styles/yellow_part.scss";
+import "../styles/YellowBeltOnMainSite.scss";
 
 export function Yellow(){
     return(

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/formJS.scss";
+import "../styles/FormJS.scss";
 
 const firstState = {
     name:'',
@@ -68,7 +68,7 @@ export default class FormJs extends React.Component{
         console.log(this.state);
         this.setState(firstState)
 //https://fer-api.coderslab.pl/v1/portfolio/contact
-            fetch('', {
+            fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
                 method: 'POST',
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(this.state)

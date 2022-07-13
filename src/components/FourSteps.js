@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/four_steps.scss";
+import "../styles/FourSteps.scss";
 import {Link} from "react-router-dom";
 
 
