@@ -3,7 +3,7 @@ import "../styles/ExamplesOne.scss";
 
 
 export function ExamplesOne(){
-  //  const [pages, setPages] = useState([FirstExamples]);
+
     return(
         <section className="fund_section">
             <section className="fund_one" style={{borderBottom:'1px solid gray'}}>
