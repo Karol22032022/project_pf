@@ -1,23 +1,15 @@
 import React from "react";
-import "../styles/about_us.scss";
+import "../styles/AboutUs.scss";
 import FormJs from "./FormJs";
-import {useState} from "react";
-import {ExamplesThree} from "./ExamplesThree";
-import {ExamplesTwo} from "./ExamplesTwo";
-import {ExamplesOne} from "./ExamplesOne";
-
-
-const pageOne = ExamplesOne;
-const pageTwo = ExamplesTwo;
-const pageThree = ExamplesThree;
+import {XYZ} from "./components_examples/Pagination";
 
 
 export function AboutUs() {
 
-    const [page, setPage] = useState([pageOne]);
 
-        return (
-            <>
+
+    return (
+        <>
             <section id="test_scroll" className="section_about_us">
                 <div className="div_about_text">
                     <p className="param_about">O nas</p>
@@ -46,13 +38,14 @@ export function AboutUs() {
             </section>
             <section className="section_with_params_who">
 
-                <button className="param_one_who" style={{backgroundColor:'white'}} onClick={() => setPage(pageOne)}>
+                <button className="param_one_who" style={{backgroundColor: 'white'}} onClick={""}>
                     <p className="param_fund">Fundacjom</p>
                 </button>
-                <button className="param_two_who" style={{backgroundColor:'white'}} onClick={() => setPage(pageTwo)}>
+                <button className="param_two_who" style={{backgroundColor: 'white'}} onClick={""}>
                     <p className="param_org">Organizacjom pozarządowym</p>
                 </button>
-                <button className="param_three_who" style={{backgroundColor:'white'}} onClick={() => setPage(pageThree)}>
+                <button className="param_three_who" style={{backgroundColor: 'white'}}
+                        onClick={""}>
                     <p className="param_local">Lokalnym zbiórkom</p>
                 </button>
 
@@ -65,23 +58,23 @@ export function AboutUs() {
                 </div>
             </section>
             <section className="section_with_examples">
-            <div className="display_page">{page}</div>
-
+                {/*//<div className="display_page">{page}</div>*/}
+<XYZ/>
             </section>
-        <section className="section_contact_with_us">
+            <section className="section_contact_with_us">
 
-            <div className="div_contact_photo">
+                <div className="div_contact_photo">
 
-            </div>
-            <section id="contact" className="section_contact_form">
+                </div>
+                <section id="contact" className="section_contact_form">
 
-                <p className="param_about">Skontaktuj się z nami!</p>
-                <img alt="decoration"
-                     src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
-                <FormJs/>
+                    <p className="param_about">Skontaktuj się z nami!</p>
+                    <img alt="decoration"
+                         src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
+                    <FormJs/>
 
+                </section>
             </section>
-        </section>
-    </>
+        </>
     )
 }
