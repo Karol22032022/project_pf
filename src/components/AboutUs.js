@@ -3,19 +3,20 @@ import "../styles/AboutUs.scss";
 import FormJs from "./FormJs";
 import {usePagination} from "./components_examples/Pagination";
 import { Pagination } from '@mui/material';
-
+import {useState} from "react";
 
 
 export function AboutUs() {
+    const [count, setContent] = useState();
+   const text1 = [
+       {id:1, key:"first",value:"takana"},
+   ];
+   const text2 = ["xyz"];
+   const text3 = ["xyz2"];
 
-    const one = "TEKST";
-    
 
-    const posts = [
-       one
-    ];
 
-    const { setCurrentPage, currentPosts, amountOfPages } = usePagination(posts);
+    const { setCurrentPage, currentPosts, amountOfPages } = usePagination(count);
 
     return (
         <>
@@ -47,14 +48,14 @@ export function AboutUs() {
             </section>
             <section className="section_with_params_who">
 
-                <button className="param_one_who" style={{backgroundColor: 'white'}} onClick={""}>
+                <button className="param_one_who" style={{backgroundColor: 'white'}} onClick={() => setContent(text1)}>
                     <p className="param_fund">Fundacjom</p>
                 </button>
-                <button className="param_two_who" style={{backgroundColor: 'white'}} onClick={""}>
+                <button className="param_two_who" style={{backgroundColor: 'white'}} onClick={() => setContent(text2)}>
                     <p className="param_org">Organizacjom pozarządowym</p>
                 </button>
                 <button className="param_three_who" style={{backgroundColor: 'white'}}
-                        onClick={""}>
+                        onClick={() => setContent(text3)}>
                     <p className="param_local">Lokalnym zbiórkom</p>
                 </button>
 
