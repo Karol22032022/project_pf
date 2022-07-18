@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export const usePagination = (posts, defaultPage = 1, amountPerPage = 3) => {
+export const usePagination = (posts, defaultPage = 0, amountPerPage = 3) => {
     const [currentPage, setCurrentPage] = useState(defaultPage);
     const [postsPerPage] = useState(amountPerPage);
     const indexOfLastPost = currentPage * postsPerPage;
