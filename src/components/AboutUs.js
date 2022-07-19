@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/AboutUs.scss";
 import FormJs from "./FormJs";
 import {usePagination} from "./components_examples/Pagination";
-import { Pagination } from '@mui/material';
+import {Pagination} from '@mui/material';
 import {useState} from "react";
+import "../styles/AboutUs.scss";
 
 export function AboutUs() {
     const [count, setContent] = useState();
@@ -19,8 +19,7 @@ export function AboutUs() {
        {id:1, key:"first",value:"Fundacja nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
        {id:1, key:"first",value:"Fundacja nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-   ];
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},];
    const text2 = [
        {id:1, key:"first",value:"Organizacja nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
@@ -33,8 +32,7 @@ export function AboutUs() {
        {id:1, key:"first",value:"Organizacja nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
        {id:1, key:"first",value:"Organizacja nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-   ];
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},];
    const text3 = [
        {id:1, key:"first",value:"Zbiórka nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
@@ -47,11 +45,7 @@ export function AboutUs() {
        {id:1, key:"first",value:"Zbiórka  nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
        {id:1, key:"first",value:"Zbiórka nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-   ];
-
-
-
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},];
     const { setCurrentPage, currentPosts, amountOfPages } = usePagination(count);
 
     return (
@@ -70,31 +64,24 @@ export function AboutUs() {
                     </div>
                 </div>
                 <div className="div_about_photo">
-
                 </div>
-
-
             </section>
-
             <section id="our_help" className="help_for">
-
                 <p className="help_who">Komu pomagamy?</p>
                 <img alt="decoration"
                      src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
             </section>
             <section className="section_with_params_who">
-
-                <button className="param_one_who" style={{backgroundColor: 'white'}} onClick={() => setContent(text1)}>
+                <button className="param_one_who" style={{backgroundColor:'white'}} onClick={() => setContent(text1)}>
                     <p className="param_fund">Fundacjom</p>
                 </button>
-                <button className="param_two_who" style={{backgroundColor: 'white'}} onClick={() => setContent(text2)}>
+                <button className="param_two_who" style={{backgroundColor:'white'}} onClick={() => setContent(text2)}>
                     <p className="param_org">Organizacjom pozarządowym</p>
                 </button>
-                <button className="param_three_who" style={{backgroundColor: 'white'}}
+                <button className="param_three_who" style={{backgroundColor:'white'}}
                         onClick={() => setContent(text3)}>
                     <p className="param_local">Lokalnym zbiórkom</p>
                 </button>
-
             </section>
             <section className="text_who_section">
                 <div className="text_about_who_one">
@@ -118,33 +105,24 @@ export function AboutUs() {
                                   <div className="text_right_side">
                                       <h4>{content.text} </h4>
                                   </div>
-
                               </div>
                           );
                       })}
-
                   </div>
                   <Pagination
                       count={amountOfPages}
                       onChange={(event, page) => setCurrentPage(page)}
-
                   />
-
               </div>
-
             </section>
             <section className="section_contact_with_us">
-
-                <div className="div_contact_photo">
-
-                </div>
+             <div className="div_contact_photo">
+             </div>
                 <section id="contact" className="section_contact_form">
-
                     <p className="param_about">Skontaktuj się z nami!</p>
                     <img alt="decoration"
-                         src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
+src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
                     <FormJs/>
-
                 </section>
             </section>
         </>
