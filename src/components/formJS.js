@@ -38,9 +38,8 @@ export default class FormJs extends React.Component{
      let textError = "";
 
      if(!this.state.name) {
-         nameError = "Wpisz imię!"
+         nameError = "Wpisz poprawne imię!"
      }
-
      if (!this.state.email.includes('@')){
          emailError = 'Podany email nie jest prawidłowy!';
      }
@@ -57,11 +56,16 @@ export default class FormJs extends React.Component{
          this.setState({emailError, nameError, textError});
          return false;
      }
-
      return true
     }
 
+
     handleSubmit = event => {
+        const readyForSendContent = {
+          name: this.state.name,
+          email: this.state.email,
+          message: this.state.text,
+        }
         event.preventDefault();
         const isValid = this.validate();
         if(isValid){
@@ -70,8 +74,8 @@ export default class FormJs extends React.Component{
 //https://fer-api.coderslab.pl/v1/portfolio/contact
             fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
                 method: 'POST',
-                headers: { "Content-Type": "application/json"},
-                body: JSON.stringify(this.state)
+                headers:{"Content-Type":"application/json"},
+                body: JSON.stringify(readyForSendContent)
             }).then(() => {
                 console.log('sending complete')
                 this.setState(lastState);
@@ -115,12 +119,13 @@ export default class FormJs extends React.Component{
                 <div className="div_text_message">
                     <p className="param_your_message" >Wpisz swoją wiadomość</p>
                     <textarea
-                        className="text_area_message"
-                        name="text"
-                        id="text_message"
-                        placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aperiam aut beatae consequatur eum expedita facere inventore iste libero nesciunt, qui quos repellendus sed suscipit totam vel velit veritatis voluptas."
-                        value={this.state.text}
-                        onChange={this.handleChange}
+ className="text_area_message"
+ name="text"
+ id="text_message"
+ placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aperiam aut beatae consequatur eum
+ expedita facere inventore iste libero nesciunt, qui quos repellendus sed suscipit totam vel velit veritatis voluptas."
+ value={this.state.text}
+ onChange={this.handleChange}
                     />
                 </div>
                 <div className="div_textError" style={{color:'red'}} >{this.state.textError}</div>
