@@ -5,14 +5,50 @@ import {usePagination} from "./components_examples/Pagination";
 import { Pagination } from '@mui/material';
 import {useState} from "react";
 
-
 export function AboutUs() {
     const [count, setContent] = useState();
    const text1 = [
-       {id:1, key:"first",value:"takana"},
+       {id:1, key:"first",value:"Fundacja nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
+       {id:2, key:"first",value:"Fundacja nr.2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:3, key:"first",value:"Fundacja nr.3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Fundacja nr.4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Fundacja nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Fundacja nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
    ];
-   const text2 = ["xyz"];
-   const text3 = ["xyz2"];
+   const text2 = [
+       {id:1, key:"first",value:"Organizacja nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
+       {id:2, key:"first",value:"Organizacja nr.2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:3, key:"first",value:"Organizacja nr.3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Organizacja nr.4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Organizacja nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Organizacja nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+   ];
+   const text3 = [
+       {id:1, key:"first",value:"Zbiórka nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
+       {id:2, key:"first",value:"Zbiórka  nr.2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:3, key:"first",value:"Zbiórka nr.3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Zbiórka  nr.4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Zbiórka  nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+       {id:1, key:"first",value:"Zbiórka nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+           text:"Accusantium amet at cupiditate ducimus.",prevState:null},
+   ];
 
 
 
@@ -69,7 +105,25 @@ export function AboutUs() {
             </section>
             <section className="section_with_examples">
               <div className="display_page">
-                  {currentPosts}
+                  <div>
+                      {currentPosts.map((content, index) => {
+                          return (
+                              <div className="pagination_div" key={index}>
+                                <div className="div_main_text">
+                                 <div>
+                                  <h2>{content.value}</h2>
+                                 </div>
+                                  <h4>{content.tx}</h4>
+                                </div>
+                                  <div className="text_right_side">
+                                      <h4>{content.text} </h4>
+                                  </div>
+
+                              </div>
+                          );
+                      })}
+
+                  </div>
                   <Pagination
                       count={amountOfPages}
                       onChange={(event, page) => setCurrentPage(page)}
