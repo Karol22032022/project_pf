@@ -133,3 +133,18 @@ display: flex;
   justify-content: center;
   align-items: center;
 }
+.pagination_div{
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .text_right_side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.MuiPagination-ul{
+  justify-content: center;
+  align-items: center;
+}
