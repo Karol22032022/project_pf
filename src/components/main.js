@@ -22,7 +22,7 @@ export function Main() {
                             <div className="div_with_links">
                                 <div className="link_give_it">
                                     <Link className="link_to_things" style={{textDecoration: 'none'}}
-                                          to="/give_things">ODDAJ RZECZY</Link>
+                                          to="/logowanie">ODDAJ RZECZY</Link>
                                 </div>
                                 <div className="link_organizing">
                                     <Link

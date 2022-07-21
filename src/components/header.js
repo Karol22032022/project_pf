@@ -10,9 +10,9 @@ export function Header(){
             <div className="link__div_links">
                 <nav className="link__nav_one">
                     <Link className="link__log_in" style={{textDecoration:'none'}}
-                          to="/logIn">Zaloguj</Link>
+                          to="/logowanie">Zaloguj</Link>
                     <Link className="link__create_account" style={{textDecoration:'none'}}
-                          to="/createAccount">Załóż konto</Link>
+                          to="/rejestracja">Załóż konto</Link>
 
                 </nav>
 
