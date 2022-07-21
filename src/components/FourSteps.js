@@ -39,7 +39,7 @@ export function FourSteps(){
             <div className="four_steps_link">
                 <div className="link_give_it" >
                     <Link className="link_to_things" style={{textDecoration:'none', color:'black'}}
-                          to="/give_things">ODDAJ RZECZY</Link>
+                          to="/logowanie">ODDAJ RZECZY</Link>
                 </div>
 
             </div>
