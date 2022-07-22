@@ -1,7 +1,6 @@
 import React from 'react';
-import "../styles/FourSteps.scss";
 import {Link} from "react-router-dom";
-
+import "../styles/FourSteps.scss";
 
 export function FourSteps(){
     return(
@@ -15,25 +14,30 @@ export function FourSteps(){
                     <img alt="pic" src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Icon-1.svg?alt=media&token=4016144e-56a8-492c-be31-68e011b3ab3b"/>
                 <p className="param_under_graph_one">Wybierz rzeczy</p>
                     <div style={{width:'5rem', height:'1px', borderBottom:'1px solid black'}}/>
-                    <p className="param_under_graph_two" style={{maxWidth:'8rem', textAlign:'center'}}>ubrania, zabawki, sprzęt i inne</p>
+                    <p className="param_under_graph_two" style={{maxWidth:'8rem', textAlign:'center'}}>
+                        ubrania, zabawki, sprzęt i inne</p>
                 </div>
                 <div className="steps_picture_two">
                     <img alt="pic" src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Icon-2.svg?alt=media&token=227d2ad9-e123-47cd-9e81-b5d3f568be41"/>
                     <p className="param_under_graph_one">Spakuj je</p>
                     <div style={{width:'5rem', height:'1px', borderBottom:'1px solid black'}}/>
-                    <p className="param_under_graph_two" style={{maxWidth:'8rem', textAlign:'center'}}>skorzystaj z worków na śmieci</p>
+                    <p className="param_under_graph_two" style={{maxWidth:'8rem', textAlign:'center'}}>
+                        skorzystaj z worków na śmieci</p>
                 </div>
                 <div className="steps_picture_three">
                     <img alt="pic" src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Icon-3.svg?alt=media&token=2aae77ea-8c22-4498-84ee-5eddb3337666"/>
-                    <p className="param_under_graph_one" style={{maxWidth:'8rem', textAlign:'center'}}>Zdecyduj komu chcesz pomóc</p>
+                    <p className="param_under_graph_one" style={{maxWidth:'8rem', textAlign:'center'}}>
+                        Zdecyduj komu chcesz pomóc</p>
                     <div style={{width:'5rem', height:'1px', borderBottom:'1px solid black'}}/>
-                    <p className="param_under_graph_two" style={{maxWidth:'8rem', textAlign:'center'}}>wybierz zaufane miejsce</p>
+                    <p className="param_under_graph_two" style={{maxWidth:'8rem', textAlign:'center'}}>
+                        wybierz zaufane miejsce</p>
                 </div>
                 <div className="steps_picture_four">
                     <img alt="pic" src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Icon-4(1).svg?alt=media&token=b350ca45-53ed-4b82-a8cb-143630a993f4"/>
                     <p className="param_under_graph_one">Zamów kuriera</p>
                     <div style={{width:'5rem', height:'1px', borderBottom:'1px solid black'}}/>
-                    <p className="param_under_graph_two" style={{maxWidth:'9rem', textAlign:'center'}}>kurier przyjedzie w dogodnym terminie</p>
+                    <p className="param_under_graph_two" style={{maxWidth:'9rem', textAlign:'center'}}>
+                        kurier przyjedzie w dogodnym terminie</p>
                 </div>
             </div>
             <div className="four_steps_link">
