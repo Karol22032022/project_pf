@@ -62,7 +62,7 @@ export default class FormJs extends React.Component{
 
     handleSubmit = event => {
         const readyForSendContent = {
-          name: this.state.name,
+          name: this.state.name.trim(),
           email: this.state.email,
           message: this.state.text,
         }
@@ -81,9 +81,9 @@ export default class FormJs extends React.Component{
                 this.setState(lastState);
             })
         }};
-
     render(){
         return(
+
             <form onSubmit={this.handleSubmit}>
                 <div className="div_complete" style={{color:'green'}}>{this.state.textComplete}</div>
                 <section style={{display:'flex', flexDirection:'row'}}>
@@ -95,7 +95,7 @@ export default class FormJs extends React.Component{
                     name="name"
                     type="text"
                     placeholder="Imię"
-                    value={this.state.name}
+                    value={this.state.name.trimEnd()}
                     onChange={this.handleChange}
                     />
                 </div>
