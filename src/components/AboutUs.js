@@ -8,43 +8,43 @@ import "../styles/AboutUs.scss";
 export function AboutUs() {
     const [count, setContent] = useState();
    const text1 = [
-       {id:1, key:"first",value:"Fundacja nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Fundacja nr 1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
-       {id:2, key:"first",value:"Fundacja nr.2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:2, key:"first",value:"Fundacja nr 2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:3, key:"first",value:"Fundacja nr.3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:3, key:"first",value:"Fundacja nr 3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Fundacja nr.4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Fundacja nr 4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Fundacja nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Fundacja nr 5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Fundacja nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Fundacja nr 6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},];
    const text2 = [
-       {id:1, key:"first",value:"Organizacja nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Organizacja nr 1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
-       {id:2, key:"first",value:"Organizacja nr.2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:2, key:"first",value:"Organizacja nr 2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:3, key:"first",value:"Organizacja nr.3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:3, key:"first",value:"Organizacja nr 3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Organizacja nr.4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Organizacja nr 4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Organizacja nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Organizacja nr 5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Organizacja nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Organizacja nr 6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},];
    const text3 = [
-       {id:1, key:"first",value:"Zbiórka nr.1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Zbiórka nr 1", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus." ,prevState:null},
-       {id:2, key:"first",value:"Zbiórka  nr.2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:2, key:"first",value:"Zbiórka  nr 2", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:3, key:"first",value:"Zbiórka nr.3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:3, key:"first",value:"Zbiórka nr 3", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Zbiórka  nr.4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Zbiórka  nr 4", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Zbiórka  nr.5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Zbiórka  nr 5", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},
-       {id:1, key:"first",value:"Zbiórka nr.6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+       {id:1, key:"first",value:"Zbiórka nr 6", tx:"Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
            text:"Accusantium amet at cupiditate ducimus.",prevState:null},];
     const { setCurrentPage, currentPosts, amountOfPages } = usePagination(count);
 
@@ -72,7 +72,10 @@ export function AboutUs() {
                      src="https://firebasestorage.googleapis.com/v0/b/test-space-d850c.appspot.com/o/Decoration.svg?alt=media&token=1c2c8f64-bc39-4175-a2c8-99a82911b539"/>
             </section>
             <section className="section_with_params_who">
-                <button className="param_one_who" style={{backgroundColor:'white'}} onClick={() => setContent(text1)}>
+                <button id="button_one"
+                       className="param_one_who" style={{backgroundColor:'white'}} onClick={() => setContent(text1)}
+
+                >
                     <p className="param_fund">Fundacjom</p>
                 </button>
                 <button className="param_two_who" style={{backgroundColor:'white'}} onClick={() => setContent(text2)}>
@@ -100,11 +103,13 @@ export function AboutUs() {
                                  <div>
                                   <h2>{content.value}</h2>
                                  </div>
+                                 <div>
                                   <h4>{content.tx}</h4>
-                                </div>
-                                  <div className="text_right_side">
-                                      <h4>{content.text} </h4>
-                                  </div>
+                                 </div>
+                                 </div>
+                                 <div className="text_right_side">
+                                   <h4>{content.text} </h4>
+                                 </div>
                               </div>
                           );
                       })}
