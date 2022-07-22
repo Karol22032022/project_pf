@@ -1,0 +1,51 @@
+.section_register_form{
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .param_create_account{
+    font-size: xx-large;
+  }
+  .div_form_regi{
+    width: 24rem;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    margin-top: 3rem;
+  }
+  .register_param_email,.register_param_password,.register_param_repeat_password{
+    font-size: large;
+  }
+  .mail_input,.password_input,.repeat_password{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid #484848;
+    width: 15.5rem;
+    height: 2rem;
+    background-color: #e5e5e5;
+  }
+  .buttons_register_form{
+    width: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+  .button_log_in,.link_create_account{
+    border:none;
+    font-size: 1.25rem;
+    background-color: white;
+    padding: 0.75rem;
+    text-decoration: none;
+    color:black;
+  }
+  .button_log_in:hover,.link_create_account:hover{
+    border:1px solid #000000;
+    cursor: pointer;
+  }
+}
